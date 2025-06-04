@@ -1,0 +1,76 @@
+site_name: Plataformas, Microsserviços e APIs
+site_author: Ian Cordibello Desponds & Beni Sliozbergas
+site_url: https://iancdesponds.github.io/documentation
+repo_url: https://github.com/iancdesponds/store-docs
+repo_name: iancdesponds/store-docs
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: grey
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: grey
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tooltips
+    - navigation.instant
+    - navigation.top
+    - navigation.path
+    - navigation.tracking
+    - navigation.expand
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      url_download: true
+  - pymdownx.superfences:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true  
+  - footnotes
+  - pymdownx.keys
+  - pymdownx.mark
+  - tables
+      
+plugins:
+  - search:
+      lang: pt
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      locale: pt
+  - minify:
+      minify_html: true
+  - termynal:
+      prompt_literal_start:
+        - "$"
+        - ">"
+
+nav:
+  - Home: index.md
+  - Projeto em Grupo: ./projeto/main.md
